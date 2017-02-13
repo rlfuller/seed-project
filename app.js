@@ -27,8 +27,9 @@ app.set("view engine", "ejs");
 
 //console.log(process.env.DATABASEURL);
 //connect to mongodb
-//mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect(process.env.DATABASEURL);
+
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+mongoose.connect(url);
 
 
 //tell app to use body parser
