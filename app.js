@@ -25,9 +25,11 @@ var seedDB = require("./seeds");
 
 app.set("view engine", "ejs");
 
+//console.log(process.env.DATABASEURL);
 //connect to mongodb
 //mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb://june:june@ds019628.mlab.com:19628/node_app_one")
+mongoose.connect(process.env.DATABASEURL);
+//mongoose.connect("mongodb://june:june@ds019628.mlab.com:19628/node_app_one")
 
 //tell app to use body parser
 app.use(bodyParser.urlencoded({extended: true}));
