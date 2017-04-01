@@ -1,20 +1,20 @@
-var express       = require("express");
-var app           = express();
-var bodyParser    = require("body-parser");
-var mongoose      = require("mongoose");
-var passport      = require("passport");
+var express = require("express");
+var app = express();
+var bodyParser = require("body-parser");
+var mongoose = require("mongoose");
+var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var methodOverride = require("method-override");
-var flash         = require("connect-flash");
+var flash = require("connect-flash");
 
-var Campground    = require("./models/campground");
-var Comment       = require("./models/comment");
-var User          = require("./models/user");
+var Campground = require("./models/campground");
+var Comment = require("./models/comment");
+var User = require("./models/user");
 
 //requiring routes
-var commentRoutes    = require("./routes/comments");
+var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
-var indexRoutes       = require("./routes/index");
+var indexRoutes = require("./routes/index");
 
 app.use(express.static(__dirname + "/public"));
 
