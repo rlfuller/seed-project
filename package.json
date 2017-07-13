@@ -1,6 +1,9 @@
 {
   "name": "yelpcamp",
   "version": "1.0.0",
+  "engines": {
+    "node":"4.8.4"
+  },
   "description": "Application for reviewing campsites",
   "main": "app.js",
   "scripts": {
